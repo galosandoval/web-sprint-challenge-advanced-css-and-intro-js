@@ -1,3 +1,23 @@
+// 1. How would you describe acessibility on the web to someone new to programming?
+
+// acessibility allows everyone to be able to see a website, whether its on a different size format, or a screen reader is needed.
+
+// 2. Talk about 3 different things you can do to ensure your website is accessible. 
+
+//ensure the website is acccessible at different sizes
+
+//ensure all the links have discriptions on the 'alt' 
+
+//ensure youre using semantic html
+
+// 3. How would you explain the concept of a variable to someone new to programming?
+
+// a variable is a piece of data that's stored in a value/word
+
+// 4. What is the purpose of using functions in code?
+
+// a function is a scalable way to change data
+
 const artists = [
     {
       "id": 0,
@@ -243,12 +263,19 @@ console.log(getArtistByIndex(artists, 2));
 
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who lived in the 20th century (1900-2000) */
 
-function get20s(/* Code here */){
+// let regex = 
 
-  /* Code here */
+// function get20s(array, period){
+//   for(i = 0; i < array.length; i++){
+//     let years = array[i].years;
+//     let name = array[i].name;
+//     if(array.years > num1 && array.years < num2){
+//       return name;
+//     }
+//   }
+// }
 
-}
-
+// console.log(get20s(artists, 19002000));
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
  *     (1) artists array
@@ -294,8 +321,8 @@ bio: 'use lorem ipsum'
 }
 
 function addArtist(newArr, array){
-  bothArr = newArr.push(array);
-  return bothArr;
+  array.push({newArr});
+  return array;
 }
 
 console.log(addArtist(myBio, artists));
@@ -308,13 +335,17 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(/* Code here */){
+function lotsOfArt(array){
+  for(i = 0; i < array.length; i++){
+  let paintings = array[i].paintings;
+  let name = array[i].name;
+  if(array[i].paintings > 100){
+    return array.name;
+   }
+  }
+};
 
-  /* Code here */
-
-}
-
-
+console.log(lotsOfArt(artists));
 
 // 🎨🎨 STRETCH 🎨🎨//
 
