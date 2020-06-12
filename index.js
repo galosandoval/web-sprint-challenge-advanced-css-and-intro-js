@@ -265,17 +265,17 @@ console.log(getArtistByIndex(artists, 2));
 
 // let regex = 
 
-// function get20s(array, period){
-//   for(i = 0; i < array.length; i++){
-//     let years = array[i].years;
-//     let name = array[i].name;
-//     if(array.years > num1 && array.years < num2){
-//       return name;
-//     }
-//   }
-// }
+function get20s(array, period){
+  for(i = 0; i < array.length; i++){
+    let years = array[i].years;
+    let name = array[i].name;
+    if(array[i].years > period[0] && array[i].years < period[1]){
+      return name;
+    }
+  }
+}
 
-// console.log(get20s(artists, 19002000));
+console.log(get20s(artists, '1900 - 2000'));
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
  *     (1) artists array
@@ -334,15 +334,15 @@ console.log(addArtist(myBio, artists));
 and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
-
+// var k = industryOptions.length; k > 0 ; k -= 1
 function lotsOfArt(artists){
   for(i = 0; i < artists.length; i++){
     let paintings = artists[i].paintings;
     let name = artists[i].name;
     if(artists[i].paintings > 100){
       return artists[i].name;
-}
-}
+    }
+  }
 }
 
 console.log(lotsOfArt(artists));
